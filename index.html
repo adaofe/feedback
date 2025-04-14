@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Black Chamas</title>
+  <style>
+    body {
+      background-color: #4B2A14;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      max-width: 650px;
+      margin: auto;
+      background-color: #6A3C1D;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #F1C58E;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #F1C58E;
+      color: #000;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e6b76f;
+    }
+    img {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Logo Black Chamas">
+    <h1>Formulário de Feedback</h1>
+    <form action="https://sheetdb.io/api/v1/jujeviro4icap" method="POST">
+      <input type="hidden" name="sheetdb" value="true">
+      <input type="hidden" name="success_url" value="https://adaofe.github.io/black-chamas-formulario/agradecimento.html">
+
+      <label>Nome:</label>
+      <input type="text" name="nome">
+
+      <label>E-mail:</label>
+      <input type="email" name="email">
+
+      <label>Você participou do evento presencialmente?</label>
+      <select name="presenca" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <label>Como você avalia o evento de forma geral?</label>
+      <select name="avaliacao" required>
+        <option value="">Selecione</option>
+        <option value="Excelente">Excelente</option>
+        <option value="Bom">Bom</option>
+        <option value="Regular">Regular</option>
+        <option value="Ruim">Ruim</option>
+      </select>
+
+      <label>O que mais te marcou no evento?</label>
+      <textarea name="impacto" rows="3"></textarea>
+
+      <label>O que podemos melhorar nas próximas edições?</label>
+      <textarea name="melhorias" rows="3"></textarea>
+
+      <label>Você se sentiu bem informado(a) antes e durante o evento?</label>
+      <select name="informacao" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Parcialmente">Parcialmente</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <label>Gostaria de receber comunicações futuras da rede Black Chamas?</label>
+      <select name="comunicacoes" required>
+        <option value="">Selecione</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <label>Sugestões ou comentários adicionais:</label>
+      <textarea name="comentarios" rows="3"></textarea>
+
+      <button type="submit">Enviar Feedback</button>
+    </form>
+  </div>
+</body>
+</html>
